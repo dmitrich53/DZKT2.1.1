@@ -76,7 +76,7 @@ class DZKT2_1_1KtTest {
             amount = amount,
             transfer = transfer,
         )
-        assertEquals(92000,result)
+        assertEquals(150000,result)
     }
 
     @Test
