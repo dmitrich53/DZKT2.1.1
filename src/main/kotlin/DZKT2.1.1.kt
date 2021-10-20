@@ -51,7 +51,7 @@ fun main() {
             val amount: Int = readLine()?.toInt() ?: 0
             card1 = bankers[x].card
             transfer = bankers[x].transfers_History_shipment
-            val t: Int = ccc(card1, amount, transfer)
+            val t: Int = commission(card1, amount, transfer)
             if (t != 0) {
                 bankers[x].cardBalance = bankers[x].cardBalance - t
                 bankers[x].transfers_History_shipment =
@@ -64,7 +64,7 @@ fun main() {
     }
 }
 
-fun ccc(card1: String, amount: Int, transfer: Int): Int {
+fun commission(card1: String, amount: Int, transfer: Int): Int {
     return when (card1) {
         "VK Pay" -> if (amount + transfer > 15000) {
             println("Превышен лимит на " + (amount + transfer - 15000) + "р");0
